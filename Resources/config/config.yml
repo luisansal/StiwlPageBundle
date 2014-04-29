@@ -69,7 +69,7 @@ sonata_media:
 
     cdn:
         server:
-            path: /StiwlPage/web/uploads/media # http://media.sonata-project.org/
+            path: /web/uploads/media # http://media.sonata-project.org/
 
     filesystem:
         local:

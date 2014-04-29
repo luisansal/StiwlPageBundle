@@ -1,0 +1,23 @@
+<?php
+namespace Stiwl\PageBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+use Sonata\MediaBundle\Entity\BaseMedia as BaseMedia;
+
+/**
+ * Stiwl\PageBundle\Entity\Media
+ *
+ * @ORM\Table(name="stiwl_page_media")
+ * @ORM\Entity(repositoryClass="Stiwl\PageBundle\Repository\MediaRepository")
+ */
+class Media {
+    
+    /**
+     * @var integer $id
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+}
