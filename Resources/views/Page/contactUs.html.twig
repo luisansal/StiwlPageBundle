@@ -1,0 +1,56 @@
+{% extends "StiwlPageBundle::template.html.twig" %}
+{% trans_default_domain "StiwlPageBundle" %}
+{% block title %}{% trans %}contact_us{% endtrans %}{% endblock %}
+{% block content %}
+<div class="content">
+    <div class="content_resize">
+        <div class="sidebar">
+            <div class="gadget">
+                <h2 class="star">{% trans %}send_us_a_message{% endtrans %}</h2>
+                <div class="clr"></div>
+                <form method="post" action="" {{ form_enctype(form) }} class="form_wrap" style="width: 100%">
+                        <div class="form_label">{{ form_label(form.name) }}:</div>
+                        <div class="form_widget">{{ form_widget(form.name) }}</div>
+                        <div class="form_errors">{{ form_errors(form.name) }}</div>
+                        <br class="clearfix">
+                        <div class="form_label">{{ form_label(form.email) }}:</div>
+                        <div class="form_widget">{{ form_widget(form.email) }}</div>
+                        <div class="form_errors">{{ form_errors(form.email) }}</div>
+                        <br class="clearfix">
+                        <div class="form_label">{{ form_label(form.subject) }}:</div>
+                        <div class="form_widget">{{ form_widget(form.subject) }}</div>
+                        <div class="form_errors">{{ form_errors(form.subject) }}</div>
+                        <br class="clearfix">
+                        <div class="form_label">{{ form_label(form.message) }}:</div>
+                        <div class="form_widget">{{ form_widget(form.message) }}</div>
+                        <div class="form_errors">{{ form_errors(form.message) }}</div>
+                        <br class="clearfix">
+                {{ form_rest(form) }}
+                        <label class="form_label">&nbsp;</label>
+                        <input type="submit" name="btnSend" value="{% trans %}send{% endtrans %}" class="button button-form form_widget">
+                    </form>
+                            </div>
+                        </div>
+                        <div class="mainbar">
+                            <div id="contact-us">
+                                <div class="col c3">
+                                    <h2><span>{% trans %}contact_us{% endtrans %}</span></h2>
+                                    <p>{% trans %}you_can_contact_us_our_information_is_below{% endtrans %}:</p>
+                                    <p class="contact_info"> 
+                                        <span>{% trans %}address{% endtrans %}:</span>{{ stiwl_page_config.enterprise.address }}<br />
+                                        {% for key, phone in stiwl_page_config.enterprise.phones %}
+                                        <span>{{ key | trans }}:</span>{{ phone.value }}<br />
+                                        {% endfor %}
+                                        <span>{% trans %}email{% endtrans %}:</span> <a href="mailto:{{ stiwl_page_config.enterprise.email }}">{{ stiwl_page_config.enterprise.email }}</a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div id="google-maps" style="float: right">
+                        {{ google_map_container(map) }}
+                        {{ google_map_js(map) }}
+                                </div>
+                            </div>
+                            <div class="clr"></div>
+                        </div>
+                    </div>
+{% endblock content %}

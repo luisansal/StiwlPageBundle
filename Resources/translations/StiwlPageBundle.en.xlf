@@ -1,0 +1,283 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="spanish">
+                <source>spanish</source>
+                <target>Spanish</target>
+            </trans-unit>
+            <trans-unit id="english">
+                <source>english</source>
+                <target>English</target>
+            </trans-unit>
+            <trans-unit id="french">
+                <source>french</source>
+                <target>French</target>
+            </trans-unit>
+            <trans-unit id="next">
+                <source>next</source>
+                <target>Next</target>
+            </trans-unit>
+            <trans-unit id="prev">
+                <source>prev</source>
+                <target>Previous</target>
+            </trans-unit>
+            <trans-unit id="login">
+                <source>login</source>
+                <target>Log in</target>
+            </trans-unit>
+            <trans-unit id="Bad credentials">
+                <source>Bad credentials</source>
+                <target>Bad credentials.</target>
+            </trans-unit>
+            <trans-unit id="code">
+                <source>code</source>
+                <target>Code</target>
+            </trans-unit>
+            <trans-unit id="password">
+                <source>password</source>
+                <target>Password</target>
+            </trans-unit>
+            <trans-unit id="copyright">
+                <source>copyright</source>
+                <target>Copyright</target>
+            </trans-unit>
+            <trans-unit id="all_rights_reserved">
+                <source>all_rights_reserved</source>
+                <target>All rights reserved</target>
+            </trans-unit>
+            <trans-unit id="made_by">
+                <source>made_by</source>
+                <target>Made By</target>
+            </trans-unit>
+            <trans-unit id="products">
+                <source>products</source>
+                <target>Products</target>
+            </trans-unit>
+            <trans-unit id="latest_products">
+                <source>latest_products</source>
+                <target>Latest products</target>
+            </trans-unit>
+            <trans-unit id="created_at">
+                <source>created_at</source>
+                <target>Created at</target>
+            </trans-unit>
+            <trans-unit id="read_more">
+                <source>read_more</source>
+                <target>Read more</target>
+            </trans-unit>
+            <trans-unit id="price">
+                <source>price</source>
+                <target>Price</target>
+            </trans-unit>
+            <trans-unit id="latest">
+                <source>latest</source>
+                <target>Latest</target>
+            </trans-unit>
+            <trans-unit id="categories">
+                <source>categories</source>
+                <target>Categories</target>
+            </trans-unit>
+            <trans-unit id="send_us_a_message">
+                <source>send_us_a_message</source>
+                <target>Send us a message</target>
+            </trans-unit>
+            <trans-unit id="contact_us">
+                <source>contact_us</source>
+                <target>Contact us</target>
+            </trans-unit>
+            <trans-unit id="you_can_contact_us_our_information_is_below">
+                <source>you_can_contact_us_our_information_is_below</source>
+                <target>You can contact us, our information is below</target>
+            </trans-unit>
+            <trans-unit id="address">
+                <source>address</source>
+                <target>Address</target>
+            </trans-unit>
+            <trans-unit id="phone">
+                <source>phone</source>
+                <target>Phone</target>
+            </trans-unit>
+            <trans-unit id="fax">
+                <source>fax</source>
+                <target>FAX</target>
+            </trans-unit>
+            <trans-unit id="others">
+                <source>others</source>
+                <target>Others</target>
+            </trans-unit>
+            <trans-unit id="email">
+                <source>email</source>
+                <target>Email</target>
+            </trans-unit>
+            <trans-unit id="send">
+                <source>send</source>
+                <target>Send</target>
+            </trans-unit>
+            <trans-unit id="name">
+                <source>name</source>
+                <target>Name</target>
+            </trans-unit>
+            <trans-unit id="subject">
+                <source>subject</source>
+                <target>Subject</target>
+            </trans-unit>
+            <trans-unit id="message">
+                <source>message</source>
+                <target>Message</target>
+            </trans-unit>
+            <trans-unit id="general">
+                <source>general</source>
+                <target>General</target>
+            </trans-unit>
+            <trans-unit id="parent">
+                <source>parent</source>
+                <target>Parent</target>
+            </trans-unit>
+            <trans-unit id="position">
+                <source>position</source>
+                <target>Position</target>
+            </trans-unit>
+            <trans-unit id="languages">
+                <source>languages</source>
+                <target>Languages</target>
+            </trans-unit>
+            <trans-unit id="language">
+                <source>language</source>
+                <target>Language</target>
+            </trans-unit>
+            <trans-unit id="description">
+                <source>description</source>
+                <target>Description</target>
+            </trans-unit>
+            <trans-unit id="actions">
+                <source>actions</source>
+                <target>Actions</target>
+            </trans-unit>
+            <trans-unit id="menus">
+                <source>menus</source>
+                <target>Menus</target>
+            </trans-unit>
+            <trans-unit id="language_menus">
+                <source>language_menus</source>
+                <target>Menus languages</target>
+            </trans-unit>
+            <trans-unit id="pages">
+                <source>pages</source>
+                <target>Pages</target>
+            </trans-unit>
+            <trans-unit id="language_pages">
+                <source>language_pages</source>
+                <target>Pages languages</target>
+            </trans-unit>
+            <trans-unit id="title">
+                <source>title</source>
+                <target>Title</target>
+            </trans-unit>
+            <trans-unit id="content">
+                <source>content</source>
+                <target>Content</target>
+            </trans-unit>
+            <trans-unit id="page">
+                <source>page</source>
+                <target>Page</target>
+            </trans-unit>
+            <trans-unit id="header_images">
+                <source>header_images</source>
+                <target>Header images</target>
+            </trans-unit>
+            <trans-unit id="images">
+                <source>images</source>
+                <target>Images</target>
+            </trans-unit>
+            <trans-unit id="category_languages">
+                <source>category_languages</source>
+                <target>Category languages</target>
+            </trans-unit>
+            <trans-unit id="product_languages">
+                <source>product_languages</source>
+                <target>Product languages</target>
+            </trans-unit>
+            <trans-unit id="language_images">
+                <source>language_images</source>
+                <target>Image languages</target>
+            </trans-unit>
+            <trans-unit id="menu">
+                <source>menu</source>
+                <target>Menu</target>
+            </trans-unit>
+            <trans-unit id="image">
+                <source>image</source>
+                <target>Image</target>
+            </trans-unit>
+            <trans-unit id="category">
+                <source>category</source>
+                <target>Category</target>
+            </trans-unit>
+            <trans-unit id="administration">
+                <source>administration</source>
+                <target>Administration</target>
+            </trans-unit>
+            <trans-unit id="log_out">
+                <source>log_out</source>
+                <target>Log out</target>
+            </trans-unit>
+            <trans-unit id="product">
+                <source>product</source>
+                <target>Product</target>
+            </trans-unit>
+            <trans-unit id="no_products_yet">
+                <source>no_products_yet</source>
+                <target>No products yet</target>
+            </trans-unit>
+            <trans-unit id="no_new_products_yet">
+                <source>no_new_products_yet</source>
+                <target>No new products yet</target>
+            </trans-unit>
+            <trans-unit id="see_page">
+                <source>see_page</source>
+                <target>See page</target>
+            </trans-unit>
+            <trans-unit id="keep_me_logged_in">
+                <source>keep_me_logged_in</source>
+                <target>Keep me logged in</target>
+            </trans-unit>
+            <trans-unit id="news">
+                <source>news</source>
+                <target>News</target>
+            </trans-unit>
+            <trans-unit id="news_languages">
+                <source>news_languages</source>
+                <target>News languages</target>
+            </trans-unit>
+            <trans-unit id="latest_news">
+                <source>latest_news</source>
+                <target>Latest news</target>
+            </trans-unit>
+            <trans-unit id="no_news_yet">
+                <source>no_news_yet</source>
+                <target>No news yet</target>
+            </trans-unit>
+            <trans-unit id="edit">
+                <source>edit</source>
+                <target>Edit</target>
+            </trans-unit>
+            <trans-unit id="no_categories_yet">
+                <source>no_categories_yet</source>
+                <target>No categories yet</target>
+            </trans-unit>
+            <trans-unit id="my_account">
+                <source>my_account</source>
+                <target>My account</target>
+            </trans-unit>
+            <trans-unit id="movil">
+                <source>movil</source>
+                <target>Movil</target>
+            </trans-unit>
+            <trans-unit id="office">
+                <source>office</source>
+                <target>Office</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

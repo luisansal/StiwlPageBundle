@@ -1,0 +1,28 @@
+stiwl_pageB_third_sonata_admin:
+    resource: "@StiwlPageThirdSonataAdminBundle/Resources/config/routing.yml"
+    prefix: /admin
+
+stiwl_pageB_third_media_admin:
+    resource: "@StiwlPageThirdSonataMediaBundle/Resources/config/routing.yml"
+    prefix: /media
+    
+stiwl_pageB_third_fos_user:
+    resource: "@StiwlPageThirdFOSUserBundle/Resources/config/routing.yml"
+    prefix:   /      
+    
+stiwl_pageB_set_locale:
+    path: /set-locale/{route}/{routeParams}
+    defaults: { _controller: StiwlPageBundle:Page:setLocale, routeParams: null }
+    
+stiwl_pageB_page:
+    path:  /page/{menuId}/{slug}
+    defaults: { _controller: StiwlPageBundle:Page:page }
+
+_stiwl_pageB:
+    resource: .
+    type: stiwl_page
+    prefix: /
+
+stiwl_pageB_index:
+    path: /
+    defaults: {_controller: StiwlPageBundle:Page:index }

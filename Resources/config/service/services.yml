@@ -1,0 +1,109 @@
+parameters:
+  stiwl_page.project: Stiwl Page
+  stiwl_page.admin.header_image_language.class: Stiwl\PageBundle\Admin\HeaderImageLanguageAdmin
+  stiwl_page.admin.header_image.class: Stiwl\PageBundle\Admin\HeaderImageAdmin
+  stiwl_page.admin.page_language.class: Stiwl\PageBundle\Admin\PageLanguageAdmin
+  stiwl_page.admin.page.class: Stiwl\PageBundle\Admin\PageAdmin
+  stiwl_page.admin.menu_language.class: Stiwl\PageBundle\Admin\MenuLanguageAdmin
+  stiwl_page.admin.menu.class: Stiwl\PageBundle\Admin\MenuAdmin
+  stiwl_page.core.class: Stiwl\PageBundle\Core\Core
+  stiwl_page.twig_extension.class: Stiwl\PageBundle\Twig\Extension\StiwlPageExtension
+  stiwl_page.routing.extra_loader.class: Stiwl\PageBundle\Routing\ExtraLoader
+  stiwl_page.menu.page.class: Knp\Menu\MenuItem
+  stiwl_page.menu_builder.class: Stiwl\PageBundle\Menu\MenuBuilder
+  
+services:
+  stiwl_page.menu_builder:
+      class: %stiwl_page.menu_builder.class%
+      arguments: ["@knp_menu.factory","@service_container"]
+
+  stiwl_page.menu.page:
+      class: %stiwl_page.menu.page.class% # the service definition requires setting the class
+      factory_service: stiwl_page.menu_builder
+      factory_method: pageMenu
+      arguments: ["@request"]
+      scope: request # needed as we have the request as a dependency here
+      tags:
+          - { name: knp_menu.menu, alias: pageMenu }
+          
+  stiwl_page.menu_config.page:
+      class: %stiwl_page.menu.page.class% # the service definition requires setting the class
+      factory_service: stiwl_page.menu_builder
+      factory_method: pageMenuConfig
+      arguments: ["@request"]
+      scope: request # needed as we have the request as a dependency here
+      tags:
+          - { name: knp_menu.menu, alias: pageMenuConfig }
+            
+  stiwl_page.routing.extra_loader:
+      class: %stiwl_page.routing.extra_loader.class%
+      arguments: ['@service_container']
+      tags:
+        - { name: routing.loader }
+        
+#  kernel.listener.route:
+#      class: Stiwl\PageBundle\EventListener\StiwlPageRouteListener
+#      arguments: ['@service_container']
+#      tags:
+#          - { name: kernel.event_listener, event: kernel.request, method: onKernelController }
+        
+  stiwl_page.twig_extension:
+      class: %stiwl_page.twig_extension.class%
+      arguments: ['@service_container']
+      tags:
+         - { name: twig.extension }   
+
+  stiwl_page.core:
+      class: %stiwl_page.core.class%
+      arguments: ['@doctrine.orm.entity_manager','@service_container']
+
+  stiwl_page.admin.menu:
+      class: %stiwl_page.admin.menu.class%
+      tags:
+          - { name: sonata.admin, manager_type: orm , group: page, label: menus }
+      arguments: [null, Stiwl\PageBundle\Entity\Menu, StiwlPageBundle:Admin/MenuAdmin ]
+      
+  stiwl_page.admin.menu_language:
+      class: %stiwl_page.admin.menu_language.class%
+      tags:
+          - { name: sonata.admin, manager_type: orm , group: page, label: language_menus }
+      arguments: [null, Stiwl\PageBundle\Entity\MenuLanguage, SonataAdminBundle:CRUD]
+
+  stiwl_page.admin.page:
+      class: %stiwl_page.admin.page.class%
+      tags:
+          - { name: sonata.admin, manager_type: orm , group: page, label: pages }
+      arguments: [null, Stiwl\PageBundle\Entity\Page, StiwlPageBundle:Admin/PageAdmin ]
+      
+  stiwl_page.admin.page_language:
+      class: %stiwl_page.admin.page_language.class%
+      tags:
+          - { name: sonata.admin, manager_type: orm , group: page, label: language_pages }
+      arguments: [null, Stiwl\PageBundle\Entity\PageLanguage, SonataAdminBundle:CRUD ]
+
+  stiwl_page.admin.header_image:
+      class: %stiwl_page.admin.header_image.class%
+      tags:
+          - { name: sonata.admin, manager_type: orm , group: header_images, label: images }
+      arguments: [null, Stiwl\PageBundle\Entity\HeaderImage, StiwlPageBundle:Admin/ImageHeaderAdmin ]
+      
+  stiwl_page.admin.header_image_language:
+      class: %stiwl_page.admin.header_image_language.class%
+      tags:
+          - { name: sonata.admin, manager_type: orm , group: header_images, label: language_images }
+      arguments: [null, Stiwl\PageBundle\Entity\HeaderImageLanguage, SonataAdminBundle:CRUD ]
+
+  twig.extension.debug:
+      class: Twig_Extension_Debug
+      tags:
+          - { name: 'twig.extension' }
+
+  twig.extension.intl:
+      class: Twig_Extensions_Extension_Intl
+      tags:
+          - { name: twig.extension } 
+
+  twig.extension.text:
+     class: Twig_Extensions_Extension_Text
+     tags:
+         - { name: twig.extension }            

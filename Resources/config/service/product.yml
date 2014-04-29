@@ -1,0 +1,30 @@
+parameters:
+  stiwl_page.admin.product_language.class: Stiwl\PageBundle\Admin\ProductLanguageAdmin
+  stiwl_page.admin.product.class: Stiwl\PageBundle\Admin\ProductAdmin
+  stiwl_page.admin.category_language.class: Stiwl\PageBundle\Admin\CategoryLanguageAdmin
+  stiwl_page.admin.category.class: Stiwl\PageBundle\Admin\CategoryAdmin
+    
+services:
+  stiwl_page.admin.category:
+    class: %stiwl_page.admin.category.class%
+    tags:
+        - { name: sonata.admin, manager_type: orm , group: product, label: categories }
+    arguments: [null, Stiwl\PageBundle\Entity\Category, StiwlPageBundle:Admin/CategoryAdmin ]
+
+  stiwl_page.admin.category_language:
+    class: %stiwl_page.admin.category_language.class%
+    tags:
+        - { name: sonata.admin, manager_type: orm , group: product, label: category_languages }
+    arguments: [null, Stiwl\PageBundle\Entity\CategoryLanguage, SonataAdminBundle:CRUD ]
+    
+  stiwl_page.admin.product:
+    class: %stiwl_page.admin.product.class%
+    tags:
+        - { name: sonata.admin, manager_type: orm , group: product, label: products }
+    arguments: [null, Stiwl\PageBundle\Entity\Product, StiwlPageBundle:Admin/ProductAdmin ]
+    
+  stiwl_page.admin.product_language:
+    class: %stiwl_page.admin.product_language.class%
+    tags:
+        - { name: sonata.admin, manager_type: orm , group: product, label: product_languages }
+    arguments: [null, Stiwl\PageBundle\Entity\ProductLanguage, SonataAdminBundle:CRUD]

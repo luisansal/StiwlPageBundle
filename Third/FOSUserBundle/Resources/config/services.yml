@@ -1,0 +1,7 @@
+parameters:
+#    stiwl_page_third_fos_user.example.class: Stiwl\PageBundle\Third\FOSUserBundle\Example
+
+services:
+#    stiwl_page_third_fos_user.example:
+#        class: %stiwl_page_third_fos_user.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

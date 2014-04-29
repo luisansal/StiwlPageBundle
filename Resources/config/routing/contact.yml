@@ -1,0 +1,3 @@
+stiwl_pageB_contact_us:
+    path:  /contact-us
+    defaults: { _controller: StiwlPageBundle:Page:contactUs }

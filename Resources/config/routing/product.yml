@@ -1,0 +1,11 @@
+stiwl_pageB_product:
+    path:  /product/{productId}/{productSlug}
+    defaults: { _controller: StiwlPageBundle:Page:product }
+    
+stiwl_pageB_products:
+    path:  /products
+    defaults: { _controller: StiwlPageBundle:Page:products }
+    
+stiwl_pageB_products_category:
+    path:  /products/category/{categoryId}/{categorySlug}
+    defaults: { _controller: StiwlPageBundle:Page:productsCategory }

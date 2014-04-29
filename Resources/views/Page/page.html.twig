@@ -1,0 +1,21 @@
+{% extends "StiwlPageBundle::template.html.twig" %}
+{% block title %}
+{% if page.menu.languages.0.name is not defined %}
+--Mantenimiento--
+{% else %}
+    {{ page.menu.languages.0.name }}
+{% endif %}
+{% endblock %}
+{% block content %}
+<div class="content">
+    <div class="content_resize">
+        <h1>{{ page.menu.languages.0.description }}</h1>
+            {% if page.languages.0.content is not defined %}
+        Usted no ha definido el contenido para este Menú.
+            {% else %}
+                {{ page.languages.0.content | raw }}
+            {% endif %}
+    </div>
+    <div class="clr"></div>
+</div>
+{% endblock content %}

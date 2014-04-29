@@ -1,0 +1,36 @@
+{% trans_default_domain "StiwlPageBundle" %}
+<h2 class="star"><a href="{{ path('stiwl_pageB_news') }}">{% trans %}latest_news{% endtrans %}</a></h2>
+<div class="clr"></div>
+<ul class="sb_menu">
+    {#{% for newsSidebar in newsSidebar %}
+        <li>{{ newsSidebar.createdDateAt | localizeddate('long','none') }}
+            <ul>
+                {% do loop.index0 %}
+                {#{{ loop.index0 }}#}
+                {#{% for news in news[loop.index0] %}
+                    <li>{{ news.languages.0.title }}</li>
+                {% endfor %}
+            </ul>
+        </li>#}
+        {#<li>
+            {{ newsSidebar.languages.0.title }}
+        </li>#}
+    {#{% endfor %}#}
+    {% for new in news %}
+        <li>
+        {% set createdPrev = loop.index0-1 == -1 ? news[loop.index0].createdDateAt : news[loop.index0-1].createdDateAt  %}
+        {% if  loop.first %}
+            {{ new.createdDateAt | localizeddate('long','none',null,null,'LLLL, y') | capitalize }}
+        {% else %}
+            {% if new.createdDateAt | date('Y - m') != createdPrev | date('Y - m') %}
+                {{ new.createdDateAt | localizeddate('long','none',null,null,'LLLL, y') | capitalize }}
+            {% endif %}
+        {% endif %}
+                <ul>
+                    <li>
+                        <a href="{{ path('stiwl_pageB_news_content',{'newsId':new.id,'newsSlug':new.languages.0.slug}) }}#{{ new.id }}">{{ new.languages.0.title }}</a>
+                    </li>
+                </ul>
+            </li>
+    {% endfor %}
+        </ul>

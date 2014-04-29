@@ -1,0 +1,28 @@
+{% extends "StiwlPageBundle::template.html.twig" %}
+{% trans_default_domain "StiwlPageBundle" %}
+{% block title %}{% trans %}login{% endtrans %}{% endblock %}
+{% block content %}
+<div class="content">
+    <div class="content_resize">
+        <h1>{{ block('title') }}</h1>
+        <form method="post" action="{{ path('login_check') }}" class="form_wrap">
+        {% if error %}
+                <div class='form_errors'>{{ error.message|trans({},'StiwlPageBundle') }}</div>
+        {% endif %}
+                <div class="form_label"><label for="username">{% trans %} code {% endtrans %}: </label></div>
+                <div class="form_widget"><input type='text' name='_username' value='{{ last_username }}' id="username"></div>
+                <div class="clearfix"></div>
+                <div class="form_label"><label for="password">{% trans %} password {% endtrans %}: </label></div>
+                <div class="form_widget"><input type='password' name='_password' id="password"></div>
+                <div class="clearfix"></div>
+                <div class="form_label"><label for="remember_me">{% trans %}keep_me_logged_in{% endtrans %}</label></div>
+                <div class="form_widget"><input type="checkbox" id="remember_me" name="_remember_me" checked /></div>
+                <div class="clearfix"></div>
+                <div class="form_label">&nbsp;</div>
+                <div class="form_widget"><input type='submit' value='{% trans %}login{% endtrans %}' class="button button-form"></div>   
+
+                </form>
+            </div>
+            <div class="clr"></div>
+        </div>
+{% endblock %}

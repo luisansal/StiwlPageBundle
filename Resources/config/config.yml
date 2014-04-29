@@ -1,0 +1,153 @@
+assetic:
+    bundles:        ['StiwlPageBundle']
+    
+fos_user:
+    db_driver: orm # other valid values are 'mongodb', 'couchdb' and 'propel'
+    firewall_name: secured_area
+    user_class: Stiwl\PageBundle\Third\FOSUserBundle\Entity\User
+    
+# Doctrine Configuration
+doctrine:
+    dbal:
+        # if using pdo_sqlite as your database driver, add the path in parameters.yml
+        # e.g. database_path: %kernel.root_dir%/data/data.db3
+        # path:     %database_path%
+        types:
+            json: Sonata\Doctrine\Types\JsonType
+
+sonata_admin:
+    title: sadf
+    dashboard:
+            blocks:
+                # display a dashboard block
+                - { position: left, type: sonata.admin.block.admin_list }
+#                - { position: right, type: sonata.block.service.text, settings: { content: "<h2>Welcome to the Administration</h2>" } }
+#                - { position: right, type: sonata.block.service.rss, settings: { title: Sonata Project's Feeds, url: http://sonata-project.org/blog/archive.rss }}
+
+sonata_block:
+    default_contexts: [cms]
+    blocks:
+        sonata.admin.block.admin_list:
+            contexts:   [admin]
+
+        #sonata.admin_doctrine_orm.block.audit:
+        #    contexts:   [admin]
+
+        sonata.block.service.custom:
+        sonata.block.service.text:
+        sonata.block.service.rss: 
+        # Some specific block from the SonataMediaBundle
+        #sonata.media.block.media:
+        #sonata.media.block.gallery:
+        #sonata.media.block.feature_media:
+    
+knp_menu:
+    twig:  # use "twig: false" to disable the Twig extension and the TwigRenderer
+          template: knp_menu.html.twig
+    templating: false # if true, enables the helper for PHP templates
+    default_renderer: twig # The renderer to use, list is also available by default
+    providers:
+        builder_alias: false    # disable the builder-based provider
+        container_aware: true   # keep this one enabled. Can be omitted as it is the default
+    
+sonata_media:
+    default_context: default
+    db_driver: doctrine_orm # or doctrine_mongodb, doctrine_phpcr
+    contexts:
+        default:  # the default context is mandatory
+            providers:
+#                - sonata.media.provider.dailymotion
+#                - sonata.media.provider.youtube
+                - sonata.media.provider.image
+#                - sonata.media.provider.file
+
+            formats:
+                headerImage: { width: 935 , quality: 70}
+                small: { width: 100 , quality: 70}
+                medium: { width: 200 , quality: 70}
+                big:   { width: 500 , quality: 70}
+
+    cdn:
+        server:
+            path: /StiwlPage/web/uploads/media # http://media.sonata-project.org/
+
+    filesystem:
+        local:
+            directory:  %kernel.root_dir%/../web/uploads/media
+            create:     false     
+            
+ivory_ck_editor:
+    configs:
+        standard:
+            toolbar:  'standard_toolbal'
+#            uiColor: '#000000'
+            language: %locale%
+#            toolbarGroups: [ { name: 'document', groups: [ 'mode', 'document', 'doctools' ] }, { name: 'clipboard', groups: [ 'clipboard', 'undo' ] }, { name: 'editing', groups: [ 'find', 'selection', 'spellchecker' ] }, { name: 'forms' }, '/', { name: 'basicstyles', groups: [ 'basicstyles', 'cleanup' ] }, { name: 'paragraph', groups: [ 'list', 'indent', 'blocks', 'align' ] }, { name: 'links' }, { name: 'insert' }, '/', { name: 'styles' }, { name: 'colors' }, { name: 'tools' }, { name: 'others' }, { name: 'about' }]
+            
+        advanced:
+            toolbar:  'advanced_toolbal'
+#            uiColor: '#ffffff'
+#            language: %locale%
+            
+    toolbars:
+        configs:
+            standard_toolbal: [ '@clipboard', '@document', '@links', '@tools', '/', '@basicstyles', '@styles', '/', '@paragraph', '@help' ]
+            advanced_toolbal: [ '@document', '@clipboard', '@editing', '/', '@forms', '/', '@basicstyles', '@paragraph','@links', '/', '@insert','/','@styles', '@colors','@tools','@help']
+        items:  
+              document : [ 'Source','-','Save','NewPage','DocProps','Preview','Print','-','Templates' ] 
+              clipboard: [ 'Cut','Copy','Paste','PasteText','PasteFromWord','-','Undo','Redo' ] 
+              editing: [ 'Find','Replace','-','SelectAll','-','SpellChecker', 'Scayt' ]
+              forms: [ 'Form', 'Checkbox', 'Radio', 'TextField', 'Textarea', 'Select', 'Button', 'ImageButton', 'HiddenField' ] 
+              basicstyles: [ 'Bold','Italic','Underline','Strike','Subscript','Superscript','-','RemoveFormat' ] 
+              paragraph : [ 'NumberedList','BulletedList','-','Outdent','Indent','-','Blockquote','CreateDiv','-','JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock','-','BidiLtr','BidiRtl' ] 
+              links: [ 'Link','Unlink','Anchor' ] 
+              insert: [ 'Image','Flash','Table','HorizontalRule','Smiley','SpecialChar','PageBreak' ] 
+              styles: [ 'Styles','Format','Font','FontSize' ] 
+              colors: [ 'TextColor','BGColor' ] 
+              tools: [ 'Maximize', 'ShowBlocks' ] 
+              help: ['About']
+
+stof_doctrine_extensions:
+    default_locale: en_US
+    orm:
+        default:
+            sluggable: true # not needed: listeners are not enabled by default
+
+stiwl_page:
+    developer: STIWL
+    website: http://www.stiwl.com/
+    enterprise:
+        name: Pharmacy S.A.C
+        short_name: pharmacy
+        business: Pharmaceutical products
+        slogan: Quality and reliability
+        money: $
+        email: luis.sanchez.saldana@gmail.com
+        address: Av. xxx #xxx
+        phones:
+            ## add what you want, defaults are movil and office
+            movil: { value: '' }
+            office: { value: '' }
+        google_map:
+            latitude: -12.09223
+            longitude: -77.00050
+            width: 300px
+            height: 300px
+    pages:
+        news:
+            enabled: true
+            #you can config the position last or first too
+            position: 0
+        products:
+            enabled: true
+            position: 1
+        contact_us:
+            enabled: true
+            position: 2
+        fos_user:
+            login:
+                visible: false
+                position: ~
+            register:
+                enabled: false
+                position: ~

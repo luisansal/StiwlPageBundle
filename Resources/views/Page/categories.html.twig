@@ -1,0 +1,13 @@
+{% trans_default_domain "StiwlPageBundle" %}
+<h2 class="star">{% trans %}categories{% endtrans %}</h2>
+<div class="clr"></div>
+<ul class="sb_menu">
+    <li>
+        <a href="{{ path('stiwl_pageB_products') }}">{% trans %}latest{% endtrans %}</a>
+    </li>
+    {% for category in categories %}
+    <li>
+        <a href="{{ path('stiwl_pageB_products_category',{'categoryId':category.id,'categorySlug':category.languages.0.slug})}}" alt="{{ category.languages.0.description }}" title="{{ category.languages.0.description }}">{{ category.languages.0.description }}</a>
+    </li>
+    {% endfor %}
+</ul>

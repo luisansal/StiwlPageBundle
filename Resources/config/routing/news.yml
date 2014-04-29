@@ -1,0 +1,7 @@
+stiwl_pageB_news:
+    path: /news
+    defaults: {_controller: StiwlPageBundle:Page:news }
+    
+stiwl_pageB_news_content:
+    path: /news/{newsId}/{newsSlug}
+    defaults: {_controller: StiwlPageBundle:Page:newsContent }
