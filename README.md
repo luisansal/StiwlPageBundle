@@ -85,6 +85,7 @@ public function registerBundles() {
         new Knp\Bundle\MenuBundle\KnpMenuBundle(),
         new Knp\Bundle\PaginatorBundle\KnpPaginatorBundle(),
         new Sonata\BlockBundle\SonataBlockBundle(),
+        new Sonata\CoreBundle\SonataCoreBundle(),
         new Sonata\AdminBundle\SonataAdminBundle(),
         new Sonata\IntlBundle\SonataIntlBundle(),
         new Sonata\DoctrineORMAdminBundle\SonataDoctrineORMAdminBundle(),
