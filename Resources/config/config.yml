@@ -16,7 +16,7 @@ doctrine:
             json: Sonata\Doctrine\Types\JsonType
 
 sonata_admin:
-    title: sadf
+    title: Stiwl Page
     dashboard:
             blocks:
                 # display a dashboard block
