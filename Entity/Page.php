@@ -12,7 +12,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 /**
  * Page
  *
- * @ORM\Table(name="pages")
+ * @ORM\Table(name="stiwl_page_pages")
  * @ORM\Entity(repositoryClass="Stiwl\PageBundle\Repository\PageRepository")
  */
 class Page {

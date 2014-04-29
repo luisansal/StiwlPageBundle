@@ -12,7 +12,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 /**
  * HeaderImage
  *
- * @ORM\Table(name="header_images")
+ * @ORM\Table(name="stiwl_page_header_images")
  * @ORM\Entity(repositoryClass="Stiwl\PageBundle\Repository\HeaderImageRepository")
  */
 class HeaderImage {

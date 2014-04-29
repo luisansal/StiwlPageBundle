@@ -13,7 +13,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 /**
  * Stiwl\ShopcartBundle\Entity\Service
  *
- * @ORM\Table(name="products")
+ * @ORM\Table(name="stiwl_page_products")
  * @ORM\Entity(repositoryClass="Stiwl\PageBundle\Repository\ProductRepository")
  * @ORM\HasLifecycleCallbacks
  */

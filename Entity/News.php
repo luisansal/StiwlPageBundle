@@ -12,7 +12,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 /**
  * News
  *
- * @ORM\Table(name="news")
+ * @ORM\Table(name="stiwl_page_news")
  * @ORM\Entity(repositoryClass="Stiwl\PageBundle\Repository\NewsRepository")
  * @ORM\HasLifecycleCallbacks
  */

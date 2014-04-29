@@ -12,7 +12,7 @@ use Gedmo\Mapping\Annotation as Gedmo;
 /**
  * Stiwl\ShopcartBundle\Entity\CategoryLanguage
  *
- * @ORM\Table(name="pages__languages")
+ * @ORM\Table(name="stiwl_page_pages__languages")
  * @ORM\Entity(repositoryClass="Stiwl\PageBundle\Repository\MenuLanguageRepository")
  */
 class PageLanguage {

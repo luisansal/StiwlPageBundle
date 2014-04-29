@@ -13,7 +13,7 @@ use Gedmo\Mapping\Annotation as Gedmo;
 /**
  * Menu
  *
- * @ORM\Table(name="menus")
+ * @ORM\Table(name="stiwl_page_menus")
  * @ORM\Entity(repositoryClass="Stiwl\PageBundle\Repository\MenuRepository")
  */
 class Menu {
