@@ -82,9 +82,6 @@ The demo website can be found in http://www.constructoraivisal.com/
 // app/appKernel.php
 public function registerBundles() {
     return array(
-        new Stiwl\PageBundle\StiwlPageBundle(),
-        new Stiwl\PageBundle\Third\SonataAdminBundle\StiwlPageThirdSonataAdminBundle(),
-        new Stiwl\PageBundle\Third\FOSUserBundle\StiwlPageThirdFOSUserBundle(),
         new Knp\Bundle\MenuBundle\KnpMenuBundle(),
         new Knp\Bundle\PaginatorBundle\KnpPaginatorBundle(),
         new Sonata\BlockBundle\SonataBlockBundle(),
@@ -97,7 +94,10 @@ public function registerBundles() {
         new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
         new Ivory\GoogleMapBundle\IvoryGoogleMapBundle(),
         new Ivory\CKEditorBundle\IvoryCKEditorBundle(),
-        new FOS\UserBundle\FOSUserBundle()
+        new FOS\UserBundle\FOSUserBundle(),
+        new Stiwl\PageBundle\StiwlPageBundle(),
+        new Stiwl\PageBundle\Third\SonataAdminBundle\StiwlPageThirdSonataAdminBundle(),
+        new Stiwl\PageBundle\Third\FOSUserBundle\StiwlPageThirdFOSUserBundle()
     );
 }
 ```
