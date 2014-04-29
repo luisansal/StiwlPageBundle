@@ -176,10 +176,6 @@ stiwl_pageB_index:
 
 ```yaml
 # app/config/security.yml
-jms_security_extra:
-    secure_all_services: false
-    expressions: true
-    
 security:
     firewalls:
         secured_area:
