@@ -27,8 +27,6 @@ The demo website can be found in http://www.constructoraivisal.com/
 : the current one, contains the Admin bundle generator.
 * [SonataBlockBundle](https://github.com/sonata-project/SonataBlockBundle)
 : the current one, contains the Block bundle to sonata admin.
-* [SonataCacheBundle](https://github.com/sonata-project/SonataCacheBundle)
-: the current one, contains the Cache bundle to sonata admin.
 * [SonataIntlBundle](https://github.com/sonata-project/SonataIntlBundle)
 : the current one, contains the Internalization bundle to sonata admin.
 * [SonataDoctrineORMAdminBundle](https://github.com/sonata-project/SonataDoctrineORMAdminBundle) 
@@ -92,7 +90,6 @@ public function registerBundles() {
         new Sonata\BlockBundle\SonataBlockBundle(),
         new Sonata\jQueryBundle\SonatajQueryBundle(),
         new Sonata\AdminBundle\SonataAdminBundle(),
-        new Sonata\CacheBundle\SonataCacheBundle(),
         new Sonata\IntlBundle\SonataIntlBundle(),
         new Sonata\DoctrineORMAdminBundle\SonataDoctrineORMAdminBundle(),
         new Sonata\EasyExtendsBundle\SonataEasyExtendsBundle(),
