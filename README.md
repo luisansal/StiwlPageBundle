@@ -271,5 +271,5 @@ stiwl_page:
 
 ## Visit my Website and my Facebook page
 
-* [STIWL](http:www.stiwl.net)
+* [STIWL](http:www.stiwl.com)
 * [Facebook](http:www.facebook.com/stiwl)
